@@ -14,3 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+body {
+  background: url('../public/bg.gif');
+}
+
+.body__left {
+  width: 30%;
+}
+
+.body__right {
+  width: 70%;
+}
+
+.body__content {
+  
+}
