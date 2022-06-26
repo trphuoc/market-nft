@@ -1,0 +1,43 @@
+@use 'variables';
+@use 'mixins';
+
+.menu {
+    list-style: none;  
+    padding: 50px 15px;
+    margin: 0;
+
+    &__item {
+      
+    }
+
+    & a {
+        transition: all .3s ease-in-out;
+        padding: 10px 30px 10px 10px;
+        font-size: 20px;
+        line-height: 36px;
+        display: block;
+        position: relative;
+        @include mixins.border-8bit-1(6px, transparent);
+
+        &::after {
+            content: '>';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            transition: all 0.3s;
+            opacity: 0;
+            color: #fff;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: variables.$green;
+            @include mixins.border-8bit-1(6px, variables.$green);
+            &::after {
+                right: 0;
+                opacity: 1;
+            }
+        }
+    }
+}

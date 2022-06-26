@@ -1,0 +1,55 @@
+@use 'variables';
+@use 'mixins';
+
+.page {  
+  min-height: 100vh;
+  background-color: variables.$black-half;
+
+  &__left {
+    background-color: variables.$white-half;
+    width: 25vw;
+    position: fixed;
+    height: 100%;
+    transition: transform .3s;
+    transform: translateX(-100%);
+  }
+
+  &__right {
+    width: auto;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  &__toggle {
+    z-index: 1;
+    height: 30px;
+    @include mixins.border-8bit-1-right(6px, variables.$white-half);
+    background-color: variables.$white-half;
+    position: fixed;
+    transform: translateX(25vw);
+
+    span {
+      &:first-child {
+        display: block;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &.show &__left {
+    transform: translateX(0);
+  }
+
+  &.show &__toggle {
+    span {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}

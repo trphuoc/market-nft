@@ -1,0 +1,46 @@
+@import './typography.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'PressStart2P', Helvetica, sans-serif;
+}
+
+body {
+  background: url('../../public/bg.gif') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-center {
+  align-items: center;
+}

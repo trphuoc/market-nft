@@ -1,0 +1,56 @@
+@use 'variables';
+@use 'mixins';
+
+.header {
+    background-color: #000;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    line-height: 40px;  
+    width: 20%;
+}
+
+.search {
+    width: 50%;
+    
+    &__input {
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+    
+        outline: none;
+        border: none;
+        width: calc(100% - 12px);
+        height: 40px;
+        padding: 15px 8px;
+        @include mixins.border-8bit-1(6px, #fff);
+        display: block;
+
+        &:hover {
+            @include mixins.border-8bit-1(6px, variables.$yellow);
+        }
+    }   
+}
+
+.metamask {
+    display: flex;
+    align-items: center;
+    background-color: variables.$red;
+    @include mixins.border-8bit-1(6px, variables.$red);
+    max-width: calc(30% - 12px);
+    height: 40px;
+    
+    &__text {
+        margin-left: 20px;
+    }
+    
+    &:hover {
+        background-color: variables.$pink;
+        @include mixins.border-8bit-1(6px, variables.$pink);
+    }
+}

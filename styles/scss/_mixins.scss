@@ -1,0 +1,26 @@
+@mixin border-8bit-1( $width, $color ) {
+    box-shadow: 
+      $width 0 $color, 
+      -$width 0 $color,
+      0 (-$width) $color, 
+      0 $width $color;
+    margin: $width auto;
+}
+
+@mixin border-8bit-1-left( $width, $color ) {
+  box-shadow: 
+    $width 0 $color, 
+    -$width 0 $color,
+    0 (-$width) $color, 
+    0 $width $color;
+  margin: $width auto;
+}
+
+@mixin border-8bit-1-right( $width, $color ) {
+  box-shadow: 
+    $width 0 $color, 
+    0 0 $color,
+    0 (-$width) $color, 
+    0 $width $color;
+  margin: $width auto;
+}
